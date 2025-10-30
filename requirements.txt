@@ -1,0 +1,8 @@
+fastapi
+langchain
+langchain-mistralai
+langgraph
+mistralai
+numpy
+python-dotenv
+ruff
