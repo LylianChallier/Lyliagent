@@ -4,5 +4,7 @@ langchain-mistralai
 langgraph
 mistralai
 numpy
+pydantic
 python-dotenv
 ruff
+uvicorn
