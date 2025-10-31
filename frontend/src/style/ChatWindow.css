@@ -1,0 +1,83 @@
+/* ChatWindow.css */
+
+/* Conteneur principal */
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+/* Zone des messages */
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Bulles de message */
+.message {
+  padding: 0.5rem 0.75rem;
+  max-width: 75%;
+  word-break: break-word;
+  border-radius: 0.75rem;
+}
+
+.message.user {
+  background-color: #3b82f6; /* bleu */
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.message.bot {
+  background-color: #e5e7eb; /* gris clair */
+  color: #111827; /* texte sombre */
+  align-self: flex-start;
+  border-bottom-left-radius: 0.25rem;
+}
+
+/* Zone d’input */
+.input-area {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Input texte */
+.input-area input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.input-area input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Bouton envoyer */
+.input-area button {
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.input-area button:hover {
+  background-color: #2563eb;
+}
