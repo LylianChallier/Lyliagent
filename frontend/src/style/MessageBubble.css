@@ -1,0 +1,39 @@
+/* MessageBubble.css */
+
+.message-bubble {
+  padding: 0.75rem 1rem;
+  max-width: 75%;
+  word-break: break-word;
+  border-radius: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  animation: slideIn 0.3s ease-out;
+}
+
+.message-bubble.user {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 0.25rem;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.message-bubble.bot {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  align-self: flex-start;
+  border-bottom-left-radius: 0.25rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

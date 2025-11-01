@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../style/ChatWindow.css";
+import MessageBubble from "./MessageBubble";
+import InputBar from "./InputBar";
 
 type Message = {
   id: number;
@@ -44,23 +46,12 @@ export default function ChatWindow() {
       {/* Zone des messages */}
       <div className="messages">
         {messages.map((msg) => (
-          <div key={msg.id} className={`message ${msg.sender}`}>
-            {msg.text}
-          </div>
+          <MessageBubble key={msg.id} text={msg.text} sender={msg.sender} />
         ))}
       </div>
 
-      {/* Zone d’input */}
-      <div className="input-area">
-        <input
-          type="text"
-          placeholder="Écris ton message..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-        />
-        <button onClick={sendMessage}>Envoyer</button>
-      </div>
+      {/* Zone d'input */}
+      <InputBar input={input} setInput={setInput} onSend={sendMessage} />
     </div>
   );
 }

@@ -6,11 +6,21 @@ from langchain.chat_models import init_chat_model
 from pydantic import BaseModel
 import uuid
 from app.config import MISTRAL_API_KEY, MISTRAL_MODEL
+from fastapi.middleware.cors import CORSMiddleware
 
 
 app = FastAPI()
 llm = init_chat_model(MISTRAL_MODEL, model_provider="mistralai", api_key=MISTRAL_API_KEY)
 sessions = {} # {session_id: ConversationBufferMemory()}
+
+# Autoriser le front à accéder à l’API
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],  # port Vite
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class ChatMessage(BaseModel):
     """Message reçu par l'agent"""

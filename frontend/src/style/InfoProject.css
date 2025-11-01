@@ -1,0 +1,21 @@
+/* InfoProject.css */
+
+.InfoProjet {
+  color: #1f2937;
+}
+
+.InfoProjet h2 {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  font-size: 1.75rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.InfoProjet {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4b5563;
+}

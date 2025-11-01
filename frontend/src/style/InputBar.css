@@ -1,0 +1,61 @@
+/* InputBar.css */
+
+.input-bar {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+}
+
+/* Input texte */
+.input-bar input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s;
+  background-color: white;
+  color: #1f2937;
+  caret-color: #667eea;
+}
+
+.input-bar input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input-bar input::placeholder {
+  color: #9ca3af;
+}
+
+/* Bouton envoyer */
+.input-bar button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.input-bar button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.input-bar button:active {
+  transform: translateY(0);
+}
+
+.input-bar button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
