@@ -1,21 +1,22 @@
 /* InfoProject.css */
 
 .InfoProjet {
-  color: #1f2937;
+  color: #e2e8f0;
 }
 
 .InfoProjet h2 {
   margin-top: 0;
-  margin-bottom: 1.25rem;
-  font-size: 1.75rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 700;
 }
 
 .InfoProjet {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #94a3b8;
 }
