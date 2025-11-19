@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import "../style/MessageBubble.css";
 
 type MessageBubbleProps = {
@@ -9,14 +10,16 @@ type MessageBubbleProps = {
 export default function MessageBubble({ text, sender, isTyping }: MessageBubbleProps) {
   const emoji = sender === "user" ? "👤" : "🤖";
 
+  // Ajoute le curseur de saisie, pour un effet de saisie en cours
+  const displayText = isTyping && sender === "bot" ? text + "|" : text;
+
   return (
     <div className={`message-container ${sender}`}>
       <div className="message-avatar">
-        {emoji}
+        <ReactMarkdown>{emoji}</ReactMarkdown>
       </div>
       <div className={`message-bubble ${sender}`}>
-        {text}
-        {isTyping && sender === "bot" && <span className="typing-cursor">|</span>}
+        <ReactMarkdown>{displayText}</ReactMarkdown>
       </div>
     </div>
   );
