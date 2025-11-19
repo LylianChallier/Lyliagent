@@ -2,8 +2,17 @@
 Voici mon chatbot IA construit avec LangChain. Essayez-le !
 Le backend est en FastAPI et le frontend en Vite+React.
 
+## Quick start! 
+Pour le lancer, il faut définir les variables d'environnement et utiliser le terminal pour lancer le backend et le frontend avec les commandes ci-dessous :
+```bash
+## pour le backend
+uvicorn app.api:app --reload --host 0.0.0.0 --port 8000
+## pour le frontend
+cd frontend && npm run dev
+```
+
 ## Les objectifs de ce projet :
-- Servir de banc d'essai pour utiliser les technos d'IA vu en cours et en projet
+- Servir de bac à sable pour utiliser les technos d'IA vu en cours et en projet
 - Gagner en autonomie et en skills pour la gestion de projet
 - Être durable et évolutif
 
